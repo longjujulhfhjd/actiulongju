@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta  name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/actiu.css"/>
+		<style>
+			body{
+				position: relative;
+			}
+		</style>
+	</head>
+		<body data-spy="scroll" data-target="#navbar-example">
+		  
+		  <div id="navbar-example">
+		    <ul class="nav nav-tabs" >
+			    <li class="active"><a href="#home"     aria-controls="home"     role="tab" data-toggle="tab">标题1</a></li>
+			    <li class="      "><a href="#profile"  aria-controls="profile"  role="tab" data-toggle="tab">标题2</a></li>
+			    <li class="		 "><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">标题3</a></li>
+			    <li class=" 	 "><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">标题4</a></li>
+			</ul>
+		  </div>
+
+		</body>
+
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$('[data-spy="scroll"]').each(function () {
+			var $spy = $(this).scrollspy('refresh')
+		})
+		$('body').scrollspy({ target: '#navbar-example' })
+	</script>
+</html>

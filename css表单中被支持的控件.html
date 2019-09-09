@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta  name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="js/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+        <style>		
+		.hr{
+			border:2px solid yellow;
+			margin: 50px 0 ;
+		}
+		</style>
+	<body>
+		<input type="text"  class="form-control" placeholder="Text"/>
+		
+		<div class="hr"></div>
+		<textarea   class="form-control" rows="6"  placeholder="textarea"></textarea>
+		
+		<div class="hr"></div>
+	    <form >
+	    	<div class="checkbox">
+				<label>
+					<input type="checkbox" />记住密码
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" />记住密码
+				</label>
+			</div>	  
+			<div class="checkbox disable">
+				<label>
+					<input type="checkbox" />记住密码
+				</label>
+			</div>	    	
+	    </form>
+	    
+		<div class="hr"></div>
+	    <form >
+			<label class="checkbox-inline">
+				<input type="checkbox" />记住密码
+			</label>
+			<label  class="checkbox-inline">
+				<input type="checkbox" />记住密码
+			</label>
+			<label  class="checkbox-inline">
+				<input type="checkbox" />记住密码
+			</label>   	
+	    </form>
+	    
+	    <div class="hr"></div>
+	    <form >
+	    	<div class="radio">
+				<label>
+					<input type="radio" />记住密码
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" />记住密码
+				</label>
+			</div>	  
+			<div class="radio">
+				<label>
+					<input type="radio" />记住密码
+				</label>
+			</div>	    	
+	    </form>
+	    	    
+		<div class="hr"></div>
+		
+		  <form >
+			<label class="radio-inline">
+				<input type="radio" />记住密码
+			</label>
+			<label  class="radio-inline">
+				<input type="radio" />记住密码
+			</label>
+			<label  class="radio-inline">
+				<input type="radio" />记住密码
+			</label>  
+	    </form> 
+	    
+	    <div class="hr"></div>
+	    <select  multiple class="form-control">
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			  <option>5</option>
+		</select>
+		
+	    <div class="hr"></div>
+	    <!--如果需要在表单中将一行纯文本和 label 元素放置于同一行，为 <p> 元素添加 .form-control-static 类即可。-->
+	    <form class="form-horizontal">
+			  <div class="form-group">
+			    <label class="col-sm-2 control-label">Email</label>
+			    <div class="col-sm-10">
+			      <p class="form-control-static">email@example.com</p>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+			    <div class="col-sm-10">
+			      <input type="password" class="form-control" placeholder="Password">
+			    </div>
+			  </div>
+		</form>
+		
+	    <div class="hr"></div>
+	    <!--如果需要在表单中将一行纯文本和 label 元素放置于同一行，为 <p> 元素添加 .form-control-static 类即可。-->
+	    <form class="form-inline">
+			  <div class="form-group">
+			    <label class="sr-only">Email</label>
+			    <div class="col-sm-10">
+			      <p class="form-control-static">email@example.com</p>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label  class="sr-only">Password</label>
+			    <div class="col-sm-10">
+			      <input type="password" class="form-control" placeholder="Password" disabled>
+			    </div>
+			  </div>  
+		</form>
+		
+		 <div class="hr"></div>
+		 
+		<div class="form-group has-success has-feedback">
+		    <label class="control-label" >成功提示</label>
+		    <input type="text" class="form-control" aria-describedby="inputSuccess2Status">
+		    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+		</div>
+		<div class="form-group has-warning has-feedback">
+		    <label class="control-label" >提醒提示</label>
+		    <input type="text" class="form-control"  aria-describedby="inputWarning2Status">
+		    <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+		</div>
+		<div class="form-group has-error has-feedback">
+		    <label class="control-label" >错误提示</label>
+		    <input type="text" class="form-control" aria-describedby="inputError2Status">
+		    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+		</div>
+		<div class="form-group has-success has-feedback">
+		    <label class="control-label">Input group with success</label>
+		    <div class="input-group">
+		        <span class="input-group-addon">@</span><!--符号-->
+		    	<input type="text" class="form-control "  aria-describedby="inputGroupSuccess1Status">
+		    </div>
+		    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+		</div>
+		
+		
+		
+		
+		<div class="hr"></div>
+	    <form >
+	    	<div class="form-group">
+				<input class="form-control" type="number" />
+	    	</div>
+			<label>
+				<input class="form-control" type="number" />
+			</label>
+			<label>
+				<input class="input-lg form-control" type="password" />
+			</label>
+			<label>
+				<input  class="input-sm form-control" type="text" />
+			</label>
+
+			
+	    </form>
+		
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap-3.3.7-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script >
+		
+	</script>
+</html>

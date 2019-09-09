@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta  name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="js/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+        <style type="text/css">
+        	.table{
+        		margin-top:20px;
+        	}
+        </style>
+	<body>
+		 <a class="btn btn-primary open-modal" data-toggle="modal" data-target=".modal-ind2">新增</a>
+		<div class="row">
+			<div class="col-sm-6" >
+				 	<table class="table  ">
+				 		<tr>
+					 		<th>学号</th>
+					 		<th>性名</th>
+					 		<th>密码</th>
+					 	</tr>
+					 	<tr>
+					 		<td>1222</td>
+					 		<td>张三</td>
+					 		<td>123456</td>
+					 	</tr>
+				 	</table>
+		    </div>
+		</div>
+		<div class="modal modal-ind2 fade">
+			<div class="modal-dialog ">
+				<div class="modal-content">
+					<!--标题-->
+					<div class="modal-header">
+						<span class="close glyphicon glyphicon-remove" data-dismiss="modal"></span>
+						<div class="modal-title">模态框</div>
+					</div>
+					<!--表单-->
+					<div class="modal-body">
+						<form class="form-horizontal form-user">
+							<div class="form-group">
+								<label  class="col-sm-2 control-label">学号：</label>
+							    <div class="col-sm-10">
+							      <input type="number" name="sno" class="form-control" placeholder="请输入学号">
+							    </div>
+							</div>
+							<div class="form-group">
+								<label  class="col-sm-2 control-label">姓名：</label>
+							    <div class="col-sm-10">
+							      <input type="text" name="username" class="form-control" placeholder="请输入姓名">
+							    </div>
+							</div>
+							<div class="form-group">
+								<label  class="col-sm-2 control-label">密码：</label>
+							    <div class="col-sm-10">
+							      <input type="password" name="password" class="form-control" placeholder="请输入密码">
+							    </div>
+							</div>
+							<div class="form-group">
+								<label  class="col-sm-2 control-label">密码：</label>
+							    <div class="col-sm-10">
+							      <input type="password" name="passwords" class="form-control" placeholder="请输入密码">
+							    </div>
+							</div>
+						</form>
+					</div>
+					<!--底部-->
+					<div class="modal-footer">
+						<a class="btn btn-primary " data-dismiss="modal">取消</a>
+						<a class="btn btn-success add-student">增加</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	
+	
+	
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/bootstrap-3.3.7-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script >
+//		验证表单
+		$(".form-user").validate({
+			rules:{
+				username:{
+					required:true
+				},
+				password:{
+					required:true,
+					rangelength:[6,18]
+				},
+				passwords:{
+					equalTo:$("[name=password]")
+				}				
+			},
+			messages:{
+				username:{
+					required:"用户名不能为空"
+				},
+				password:{
+					required:"密码不能为空",
+					rangelength:"请输入长度为6-18位之间的密码"
+				},
+				passwords:{
+					equalTo:"请输入相同的密码"
+				},
+				sno:{
+					sno:"请输入正确的密码"
+				}
+			}			
+		})
+//		添加学生
+		$(".add-student").click(function(){
+			//判断验证是否通过
+			if(!($(".form-user")).validate()) return ;
+			var sno=$("[name=sno]").val();
+			var psd=$("[name=password]").val();
+			var name=$("[name=username]").val();
+			var html=`
+						<tr>
+					 		<td>${sno}</td> 
+					 		<td>${name}</td>
+					 		<td>${psd}</td>
+					 	</tr> `
+			$(".table").append(html)
+			$(".modal-ind2").modal('hide')
+		})
+		//重置表单
+		$(".modal-ind2").on('hide.bs.modal',function(){
+			$('.form-user')[0].reset();
+		})
+	</script>
+</html>
